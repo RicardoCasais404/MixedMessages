@@ -15,15 +15,20 @@ const outcomes = [
   "new beginnings",
 ];
 
-// Assigning the random indexes to new variables.
-const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
-const randomVerbs = verbs[Math.floor(Math.random() * verbs.length)];
-const randomOutcomes = outcomes[Math.floor(Math.random() * outcomes.length)];
+function generateMessage() {
+  // Assigning the random indexes to new variables.
+  const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
+  const randomVerbs = verbs[Math.floor(Math.random() * verbs.length)];
+  const randomOutcomes = outcomes[Math.floor(Math.random() * outcomes.length)];
 
-// DEBUG STATEMENT - console.log(randomSubject);
-// DEBUG STATEMENT - console.log(randomOutcomes);
-// DEBUG STATEMENT - console.log(randomVerbs);
+  // DEBUG STATEMENT - console.log(randomSubject);
+  // DEBUG STATEMENT - console.log(randomOutcomes);
+  // DEBUG STATEMENT - console.log(randomVerbs);
 
-// Creating the "finalMessage" variable to hold the joined sentences.
-const finalMessage = `${randomSubject} ${randomVerbs} ${randomOutcomes}.`;
-console.log(finalMessage);
+  // Creating the "finalMessage" variable to hold the joined sentences and returning the final result.
+  const finalMessage = `${randomSubject} ${randomVerbs} ${randomOutcomes}.`;
+  return finalMessage;
+}
+
+// Final output.
+console.log(generateMessage());
